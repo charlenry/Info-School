@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.2.0-beta1"
+  },
+  "name": "Info-School",
+  "version": "1.0.0",
+  "description": "Projet Info School",
+  "main": "script.js",
+  "devDependencies": {},
+  "scripts": {
+    "sass": "sass --watch ./assets/scss/main.scss:./assets/css/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
