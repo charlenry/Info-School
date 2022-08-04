@@ -8,11 +8,11 @@ Array.from(forms).forEach(form => {
   form.addEventListener('submit', event => {
     if (!form.checkValidity()) {
       event.preventDefault();
-      event.stopPropagation();
+      // event.stopPropagation();
+      form.classList.add('was-validated');
+    } else {
+       alert("Merci pour votre message.\nCliquez sur OK pour confirmer l'envoi.");
     }
-
-    form.classList.add('was-validated')
-
   }, false)
 });
 
