@@ -81,30 +81,31 @@
         <form class="needs-validation" novalidate>
           <div class="timeInput mb-3">
             <label for="timeInput" class="form-label">Temps :</label>
-            <input type="text" class="form-control" id="timeInput" placeholder="mm:ss" aria-describedby="timeHelp"
-              required>
-            <img class="icon-error" src="assets/images/icons/exclamation-circle-red.svg" alt="">
-            <div class="invalid-feedback" id="timeError">
-              Veuillez respecter le format mm:ss
-            </div>
-            <div class="valid-feedback">
-              C'est bon !
-            </div>
+            <input 
+              type="text" 
+              class="form-control" 
+              id="timeInput" 
+              placeholder="mm:ss" 
+              pattern="^(\d\d):(\d\d)$" 
+              aria-describedby="timeHelp" 
+              required
+            >
+            <div class="invalid-feedback" id="timeError">Veuillez respecter le format mm:ss</div>
+            <div class="valid-feedback">C'est bon !</div>
           </div>
+
           <div class="note mb-3">
             <label for="note" class="form-label">Note :</label>
-            <textarea id="note" rows="5" class="form-control" required></textarea>
-            <div class="invalid-feedback">
-              Veuillez saisir votre message.
-            </div>
-            <div class="valid-feedback">
-              C'est bon !
-            </div>
+            <textarea class="form-control" id="note" rows="5" minlength="3" required></textarea>
+            <div class="invalid-feedback">Veuillez saisir votre message.</div>
+            <div class="valid-feedback">C'est bon !</div>
           </div>
+
           <div class="form-check mb-3">
             <input class="form-check-input" type="checkbox" id="gridCheck">
             <label class="form-check-label" for="gridCheck">Rendre cette notation publique</label>
           </div>
+
           <button type="submit" class="btn btn-primary">Envoyer</button>
         </form>
       </div>
